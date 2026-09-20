@@ -70,6 +70,31 @@ Keeps a permanent log of every order you can check anytime.
 If you skip A/B/C setup, the site still works fully — cart, checkout and the WhatsApp
 confirmation button all function without any keys.
 
+## 4.5 Admin Dashboard (view & manage orders)
+
+`admin.html` is a private, login-protected page listing every order (from Firestore, step C
+above) with a status you can update: New → Packed → Delivered. Visit `yoursite.com/admin.html`.
+
+Setup (after completing step C — Firebase Firestore — above):
+
+1. Firebase Console → Build → **Authentication** → Get started → enable **Email/Password** sign-in method.
+2. Authentication → Users → **Add user** → enter the email/password you'll log in with.
+3. Firestore Database → **Rules** tab → replace the rules with:
+   ```
+   rules_version = '2';
+   service cloud.firestore {
+     match /databases/{database}/documents {
+       match /orders/{orderId} {
+         allow create: if true;
+         allow read, update, delete: if request.auth != null;
+       }
+     }
+   }
+   ```
+   Click **Publish**. This lets customers place orders, but only your logged-in admin
+   account can view or manage them — anyone else hitting the database directly is blocked.
+4. Open `admin.html` on your deployed site and log in with the user from step 2.
+
 ## 5. Deploy for free
 
 Recommended: **Firebase Hosting** (same account as Firestore, free, unlimited-ish
