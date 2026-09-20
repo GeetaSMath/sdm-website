@@ -273,6 +273,9 @@ async function handleCheckoutSubmit(e) {
     total: cartTotal(),
   };
 
+  // Open synchronously (same click gesture) so browsers don't block the popup.
+  window.open(buildWhatsappLink(order), "_blank");
+
   const placeBtn = document.getElementById("placeOrderBtn");
   placeBtn.disabled = true;
   placeBtn.textContent = "Placing order...";
@@ -282,7 +285,6 @@ async function handleCheckoutSubmit(e) {
   placeBtn.disabled = false;
   placeBtn.textContent = "Place Order";
 
-  document.getElementById("whatsappConfirmLink").href = buildWhatsappLink(order);
   closeCheckout();
   document.getElementById("successOverlay").classList.add("show");
 
