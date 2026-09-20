@@ -8,7 +8,7 @@ const SHOP_CONFIG = {
   tagline: "Quality Crackers, Festival Joy Delivered",
   whatsappNumber: "919036994562",        // format: country code + number, no + or spaces
   contactPhone: "+91 90369 94562",       // display number
-  contactEmail: "your-shop-email@example.com", // TODO: where you want order emails
+  contactEmail: "shreebiradar64@gmail.com",
   address: "Sindagi, Karnataka",
   instagramUrl: "",                      // optional
   facebookUrl: "",                       // optional
