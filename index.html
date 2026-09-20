@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shree Suddhrameshwara Crackers | Sindagi</title>
+<meta name="description" content="Buy quality crackers online in Sindagi, Karnataka. Sparklers, flower pots, chakkers, rockets, sound crackers and gift boxes." />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- Top contact bar -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span>📍 <span id="topbarAddress"></span></span>
+    <span>📞 <a id="topbarPhone" href="#"></a></span>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="container header-inner">
+    <a href="#" class="logo">
+      <span class="logo-icon">🎆</span>
+      <span>
+        <span id="shopNameHeader" class="logo-name"></span>
+        <span class="logo-tagline" id="shopTagline"></span>
+      </span>
+    </a>
+    <div class="search-wrap">
+      <input type="text" id="searchInput" placeholder="Search crackers e.g. sparklers, rockets..." />
+    </div>
+    <button class="cart-btn" id="cartBtn">
+      🛒 Cart <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+  <nav class="nav">
+    <div class="container nav-inner" id="navCategories"></div>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero-inner">
+    <h1>Light Up This Festival! 🎇</h1>
+    <p>Premium quality crackers at the best prices — delivered across <span id="heroAddress"></span>.</p>
+    <p class="min-order-note">Minimum order: <span id="minOrderAmount"></span></p>
+    <a href="#products" class="btn-primary">Shop Now</a>
+  </div>
+</section>
+
+<!-- Category Grid -->
+<section class="container section">
+  <h2 class="section-title">Shop by Category</h2>
+  <div class="category-grid" id="categoryGrid"></div>
+</section>
+
+<!-- Products -->
+<section class="container section" id="products">
+  <h2 class="section-title">Our Products</h2>
+  <div class="filter-bar" id="filterBar"></div>
+  <div class="product-grid" id="productGrid"></div>
+  <p id="noResults" class="no-results" style="display:none">No products found.</p>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <h3 id="footerShopName"></h3>
+      <p id="footerAddress"></p>
+      <p>📞 <span id="footerPhone"></span></p>
+      <p>WhatsApp: <a id="footerWhatsapp" href="#" target="_blank">Chat with us</a></p>
+    </div>
+    <div>
+      <h4>Policies</h4>
+      <p>⚠️ Crackers sale/use subject to local rules &amp; timing regulations. Buyer must comply with state/PESO guidelines.</p>
+      <p>Prices &amp; stock subject to change without notice.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; <span id="footerYear"></span> <span id="footerShopName2"></span>. All rights reserved.
+  </div>
+</footer>
+
+<!-- Cart Drawer -->
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button id="closeCart" class="icon-btn">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <strong id="cartTotal">₹0</strong>
+    </div>
+    <p id="cartMinNotice" class="min-notice"></p>
+    <button class="btn-primary full-width" id="checkoutBtn">Proceed to Checkout</button>
+  </div>
+</aside>
+
+<!-- Checkout Modal -->
+<div class="modal-overlay" id="checkoutOverlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>Complete Your Order</h3>
+      <button id="closeCheckout" class="icon-btn">✕</button>
+    </div>
+    <form id="checkoutForm">
+      <label>Full Name *<input type="text" id="custName" required /></label>
+      <label>Phone Number *<input type="tel" id="custPhone" required pattern="[0-9]{10}" placeholder="10 digit mobile number" /></label>
+      <label>Delivery Address *<textarea id="custAddress" required rows="3"></textarea></label>
+      <label>Notes (optional)<textarea id="custNotes" rows="2"></textarea></label>
+      <div class="order-summary" id="orderSummary"></div>
+      <button type="submit" class="btn-primary full-width" id="placeOrderBtn">Place Order</button>
+    </form>
+  </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal-overlay" id="successOverlay">
+  <div class="modal small">
+    <h3>✅ Order Received!</h3>
+    <p>Thank you! We've received your order request. Tap below to confirm instantly on WhatsApp so we can start packing.</p>
+    <a id="whatsappConfirmLink" class="btn-primary full-width" target="_blank">Confirm on WhatsApp</a>
+    <button class="btn-secondary full-width" id="closeSuccess">Close</button>
+  </div>
+</div>
+
+<!-- Firebase (optional — only used if configured in js/config.js) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<!-- EmailJS (optional — only used if configured in js/config.js) -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script src="js/config.js"></script>
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
