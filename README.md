@@ -1,4 +1,4 @@
-# Shree Suddhrameshwara Crackers — Website
+# Shree Siddharameshwar Crackers — Website
 
 A crackers e-commerce catalog site (styled like bigfestival.in) with cart, checkout,
 and real-time order alerts — no paid backend required.

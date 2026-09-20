@@ -4,7 +4,7 @@
 // ============================================================
 const SHOP_CONFIG = {
   // --- Business identity ---
-  shopName: "Shree Suddhrameshwara Crackers",
+  shopName: "Shree Siddharameshwar Crackers",
   tagline: "Quality Crackers, Festival Joy Delivered",
   whatsappNumber: "919036994562",        // format: country code + number, no + or spaces
   contactPhone: "+91 90369 94562",       // display number
