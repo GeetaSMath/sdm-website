@@ -6,8 +6,8 @@ const SHOP_CONFIG = {
   // --- Business identity ---
   shopName: "Shree Suddhrameshwara Crackers",
   tagline: "Quality Crackers, Festival Joy Delivered",
-  whatsappNumber: "919108661607",        // format: country code + number, no + or spaces
-  contactPhone: "+91 91086 61607",       // display number
+  whatsappNumber: "919036994562",        // format: country code + number, no + or spaces
+  contactPhone: "+91 90369 94562",       // display number
   contactEmail: "your-shop-email@example.com", // TODO: where you want order emails
   address: "Sindagi, Karnataka",
   instagramUrl: "",                      // optional
